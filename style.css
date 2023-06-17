@@ -71,6 +71,71 @@ nav ul li {
   font-size: 17px;
   padding: 10px;
 }
+
+/*Styling for Search bar in nav begins here*/
+.searchbar {
+  margin-bottom: auto;
+  margin-top: auto;
+  height: 40px;
+  background-color: #353b48;
+  /* background-color: #ff523b; */
+  border-radius: 25px;
+  padding: 5px;
+}
+.search_input {
+  color: white;
+  border: 0;
+  outline: 0;
+  background: none;
+  width: 0;
+  caret-color: transparent;
+  line-height: 30px;
+  transition: width 0.4s linear;
+}
+.search_input::-webkit-input-placeholder { /* Edge */
+  color: #eeeade;
+}
+
+.search_input:-ms-input-placeholder { /* Internet Explorer 10-11 */
+  color: #eeeade;
+}
+
+.search_input::placeholder {
+  color: #eeeade;
+}
+.searchbar:hover > .search_input {
+  padding: 0 10px;
+  width: 200px;
+  caret-color: #eeeade;
+  transition: width 0.4s linear;
+}
+.searchbar:hover {
+  background: #ff523b;
+}
+.searchbar:hover > .search_icon {
+  background: white;
+  color: #e74c3c;
+}
+
+.search_input:focus::-webkit-input-placeholder { color:transparent; }
+.search_input:focus:-moz-placeholder { color:transparent; } /* Firefox 18- */
+.search_input:focus::-moz-placeholder { color:transparent; } /* Firefox 19+ */
+.search_input:focus:-ms-input-placeholder { color:transparent; } /* oldIE 😉 */
+
+.search_icon {
+  height: 30px;
+  width: 30px;
+  float: right;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  color: white;
+  text-decoration: none;
+}
+
+/*Styling for Search bar in nav ends here*/
+
 .col-2 p{
   text-align: left;
   line-height: 1.7;
@@ -306,7 +371,7 @@ ul li a {
 ul li a:hover {
   color: #ff523b;
 }
-form {
+.form-news {
   padding-bottom: 5%;
   padding-left: 10px;
   display: flex;
@@ -315,7 +380,7 @@ form {
   border-bottom: 1px solid #ccc;
   margin-bottom: 70px;
 }
-form .far {
+.form-news .far {
   font-size: 38px;
 }
 #search-form{
@@ -329,12 +394,12 @@ form .far {
 button  .submit{
   border-radius: 15px;
 }
-form button>i{
+.form-news button>i{
   padding: 8px;
   border-radius: 10px;
 }
 
-form input {
+.form-news input {
   background: transparent;
   color: #ccc;
   width: 200px;
@@ -343,7 +408,7 @@ form input {
   outline: none;
 }
 
-.form-news{
+form{
   margin-bottom: 30px;
 }
 .social-media{
@@ -796,4 +861,6 @@ h3 {
   border-radius: 4px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
+
+
 
